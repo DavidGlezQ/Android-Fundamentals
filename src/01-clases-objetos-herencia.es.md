@@ -1,6 +1,12 @@
+# Classes, Objects & Inheritance / Clases, objetos y herencia
+
+[English version](01-clases-objetos-herencia.en.md)
+
+---
+
 ## 1. `class` — la base
 
-Una `class` es una plantilla para crear objetos. **Encapsula propiedades (estado) y funciones (comportamiento)** en una sola unidad: los datos que un objeto necesita cargar y las acciones que puede realizar viven juntos, en vez de estar sueltos por el código.
+Una `class` es un molde para crear objetos. **Encapsula propiedades (estado) y funciones (comportamiento)** en una sola unidad: los datos que un objeto necesita cargar y las acciones que puede realizar viven juntos, en vez de estar sueltos por el código.
 
 Por defecto en Kotlin es **`final`**: no se puede heredar de ella salvo que la marques `open`.
 
@@ -16,9 +22,31 @@ val u = User("Ana", 30)
 
 ---
 
-## 2. Herencia (`open`, `override`)
+## 2. Herencia — definición base
 
-Para permitir herencia, la clase y los miembros que se puedan sobreescribir deben ser `open`:
+**Herencia** es un **mecanismo de la Programación Orientada a Objetos (POO)** que permite **reutilizar propiedades y comportamientos de otras clases**. Concretamente: una clase (la **subclase** o clase hija) adquiere las propiedades y funciones de otra (la **superclase** o clase base), pudiendo además agregar las suyas propias o modificar el comportamiento heredado.
+
+Resuelve un problema concreto: **reutilizar código** entre clases que comparten características, sin copiar y pegar. Si `Dog` y `Cat` son ambos `Animal`, no repetís `name`, `age` en cada uno — los heredás de una base común.
+
+```kotlin
+open class Animal(val name: String, val age: Int)   // superclase / clase base
+
+class Dog(name: String, age: Int) : Animal(name, age)  // subclase / clase hija
+// Dog HEREDA name y age de Animal, sin redeclararlos
+```
+
+La relación que crea la herencia se describe como **"es un"** (*is-a*): un `Dog` **es un** `Animal`. Esa relación es justo lo que permite el **polimorfismo**: tratar un `Dog` como si fuera un `Animal` en cualquier lugar que espere un `Animal`.
+
+```kotlin
+fun describe(animal: Animal) = println(animal.name)
+describe(Dog("Rex", 3))   // un Dog se puede pasar donde se espera un Animal
+```
+
+---
+
+## 3. Cómo se habilita en Kotlin (`open`, `override`)
+
+Para permitir herencia, la clase y los miembros que se puedan sobreescribir deben ser `open` (recordá: en Kotlin todo es `final` por defecto — ver sección 1).
 
 ```kotlin
 open class Animal(val name: String) {
@@ -44,9 +72,9 @@ class Dog(name: String) : Animal(name), Runnable, Comparable<Dog> {
 
 ---
 
-## 3. `abstract class`
+## 4. `abstract class`
 
-Una clase que **no se puede instanciar directamente** — existe para ser heredada. Puede mezclar miembros **abstractos** (sin implementación, obligatorios de sobreescribir) con miembros **concretos** (con implementación, compartidos por todas las hijas).
+Una **clase base que sirve para otras clases**: se usa cuando **varias clases comparten la misma estructura y datos en común**, y no se puede instanciar directamente — existe para ser heredada. Puede mezclar miembros **abstractos** (sin implementación, obligatorios de sobreescribir) con miembros **concretos** (con implementación, compartidos por todas las hijas).
 
 ```kotlin
 abstract class Shape {
@@ -63,7 +91,7 @@ class Circle(val radius: Double) : Shape() {
 
 ---
 
-## 4. `interface`
+## 5. `interface`
 
 Un contrato: define qué métodos/propiedades debe tener algo, sin decir (necesariamente) cómo. Las interfaces en Kotlin **sí pueden tener implementación por defecto**:
 
@@ -93,7 +121,7 @@ Una interfaz **no puede tener estado propio con backing field** (no podés guard
 
 ---
 
-## 5. `data class`
+## 6. `data class`
 
 Clase pensada para **contener datos**. El compilador genera automáticamente, a partir de las propiedades del **constructor primario**:
 
@@ -118,7 +146,7 @@ val (id, name, age) = u1         // destructuring
 
 ---
 
-## 6. `object` — singleton nativo
+## 7. `object` — singleton nativo
 
 Declara una clase con **una sola instancia**, creada de forma lazy y thread-safe automáticamente por el compilador. No hay constructor (no podés instanciarlo con `()`).
 
@@ -143,7 +171,7 @@ val listener = object : View.OnClickListener {
 
 ---
 
-## 7. `companion object`
+## 8. `companion object`
 
 Un `object` **anidado dentro de una clase**, ligado a esa clase (no a sus instancias) — es el reemplazo de `static` de Java.
 
@@ -162,7 +190,7 @@ Usos típicos: factory methods, constantes ligadas a la clase, implementar una i
 
 ---
 
-## 8. `data object`
+## 9. `data object`
 
 Combinación de `object` + los beneficios de `data class`, pero sin datos (porque un `object` no tiene constructor con propiedades). Da automáticamente un `toString()` legible y `equals`/`hashCode` consistentes — útil sobre todo para estados sin datos en una `sealed class/interface`.
 
@@ -190,7 +218,7 @@ No son alternativas una de la otra — de hecho podés tener un `companion data 
 
 ---
 
-## 9. `enum class`
+## 10. `enum class`
 
 Conjunto **fijo y cerrado de instancias únicas**, todas con la misma forma (estructura).
 
@@ -211,7 +239,7 @@ Da gratis: `values()`, `valueOf()`, `.ordinal`, `.name`, y es iterable. Pero **t
 
 ---
 
-## 10. `sealed class` / `sealed interface`
+## 11. `sealed class` / `sealed interface`
 
 Jerarquía **cerrada**: todas las implementaciones deben vivir en el mismo módulo/paquete, así que el compilador conoce **todo el conjunto** y puede verificar que un `when` sea **exhaustivo sin `else`**.
 
@@ -279,11 +307,14 @@ sealed interface UiState {
 | Conjunto cerrado donde cada caso lleva datos distintos | `sealed class` / `sealed interface` |
 | Contrato que implementan clases no relacionadas | `interface` |
 | Base con estado + lógica compartida, sin instanciar directo | `abstract class` |
+| Reutilizar propiedades/comportamiento de otra clase | Herencia (`open`/`override`) |
 
 ---
 
 ## Frases para entrevista
 
+- *"Una clase encapsula propiedades y comportamiento — estado y funciones — en una sola unidad."*
+- *"Herencia es un mecanismo de POO para reutilizar propiedades y comportamientos de otras clases; crea una relación 'es un' que habilita polimorfismo."*
 - *"Kotlin no permite herencia múltiple de clases, pero sí de interfaces — por eso favorece composición sobre jerarquías profundas."*
 - *"abstract class cuando necesito estado compartido en la base; interface cuando solo defino un contrato."*
 - *"data class genera equals/hashCode/copy solo del constructor primario — una propiedad en el cuerpo se ignora."*

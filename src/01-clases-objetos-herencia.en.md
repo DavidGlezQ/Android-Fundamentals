@@ -1,3 +1,9 @@
+# Classes, Objects & Inheritance / Clases, objetos y herencia
+
+[Versión en español](01-clases-objetos-herencia.md)
+
+---
+
 ## 1. `class` — the basics
 
 A `class` is a blueprint for creating objects. It **encapsulates properties (state) and functions (behavior)** into a single unit: the data an object needs to hold and the actions it can perform live together, instead of being scattered across the code.
@@ -16,9 +22,31 @@ val u = User("Ana", 30)
 
 ---
 
-## 2. Inheritance (`open`, `override`)
+## 2. Inheritance — base definition
 
-To allow inheritance, the class and the members that can be overridden must be `open`:
+Inheritance is an **Object-Oriented Programming (OOP) mechanism** that allows **reusing properties and behaviors from other classes**. Concretely: a class (the **subclass** or child class) acquires the properties and functions of another (the **superclass** or base class), while also being able to add its own or modify the inherited behavior.
+
+It solves a concrete problem: **reusing code** between classes that share characteristics, without copy-pasting. If `Dog` and `Cat` are both `Animal`, you don't repeat `name`, `age` in each one — you inherit them from a common base.
+
+```kotlin
+open class Animal(val name: String, val age: Int)   // superclass / base class
+
+class Dog(name: String, age: Int) : Animal(name, age)  // subclass / child class
+// Dog INHERITS name and age from Animal, without redeclaring them
+```
+
+The relationship inheritance creates is described as **"is-a"**: a `Dog` **is an** `Animal`. That relationship is exactly what enables **polymorphism**: treating a `Dog` as if it were an `Animal` anywhere an `Animal` is expected.
+
+```kotlin
+fun describe(animal: Animal) = println(animal.name)
+describe(Dog("Rex", 3))   // a Dog can be passed where an Animal is expected
+```
+
+---
+
+## 3. How it's enabled in Kotlin (`open`, `override`)
+
+To allow inheritance, the class and the members that can be overridden must be `open` (remember: everything in Kotlin is `final` by default — see section 1).
 
 ```kotlin
 open class Animal(val name: String) {
@@ -44,9 +72,9 @@ class Dog(name: String) : Animal(name), Runnable, Comparable<Dog> {
 
 ---
 
-## 3. `abstract class`
+## 4. `abstract class`
 
-A class that **cannot be instantiated directly** — it exists to be inherited. It can mix **abstract** members (no implementation, mandatory to override) with **concrete** members (with implementation, shared by all subclasses).
+A **base class meant for other classes**: used when **several classes share the same structure and common data**, and it cannot be instantiated directly — it exists to be inherited. It can mix **abstract** members (no implementation, mandatory to override) with **concrete** members (with implementation, shared by all subclasses).
 
 ```kotlin
 abstract class Shape {
@@ -63,7 +91,7 @@ class Circle(val radius: Double) : Shape() {
 
 ---
 
-## 4. `interface`
+## 5. `interface`
 
 A contract: defines what methods/properties something must have, without (necessarily) saying how. Interfaces in Kotlin **can have default implementations**:
 
@@ -93,7 +121,7 @@ An interface **can't hold real state with a backing field** (you can't store an 
 
 ---
 
-## 5. `data class`
+## 6. `data class`
 
 A class meant to **hold data**. The compiler automatically generates, from the **primary constructor** properties:
 
@@ -118,7 +146,7 @@ val (id, name, age) = u1         // destructuring
 
 ---
 
-## 6. `object` — native singleton
+## 7. `object` — native singleton
 
 Declares a class with **a single instance**, created lazily and thread-safe automatically by the compiler. There's no constructor (you can't instantiate it with `()`).
 
@@ -143,7 +171,7 @@ val listener = object : View.OnClickListener {
 
 ---
 
-## 7. `companion object`
+## 8. `companion object`
 
 An `object` **nested inside a class**, tied to that class (not to its instances) — it's the replacement for Java's `static`.
 
@@ -162,7 +190,7 @@ Typical uses: factory methods, constants tied to the class, implementing a "stat
 
 ---
 
-## 8. `data object`
+## 9. `data object`
 
 A combination of `object` + the benefits of `data class`, but without data (since an `object` has no constructor with properties). It automatically gives you a readable `toString()` and consistent `equals`/`hashCode` — mainly useful for dataless states in a `sealed class/interface`.
 
@@ -190,7 +218,7 @@ They aren't alternatives to each other — in fact you can have a `companion dat
 
 ---
 
-## 9. `enum class`
+## 10. `enum class`
 
 A **fixed, closed set of unique instances**, all with the same shape (structure).
 
@@ -211,7 +239,7 @@ Gives you for free: `values()`, `valueOf()`, `.ordinal`, `.name`, and it's itera
 
 ---
 
-## 10. `sealed class` / `sealed interface`
+## 11. `sealed class` / `sealed interface`
 
 A **closed** hierarchy: all implementations must live in the same module/package, so the compiler knows **the whole set** and can verify a `when` is **exhaustive without `else`**.
 
@@ -279,11 +307,14 @@ sealed interface UiState {
 | A closed set where each case carries different data | `sealed class` / `sealed interface` |
 | A contract implemented by unrelated classes | `interface` |
 | A base with state + shared logic, not instantiated directly | `abstract class` |
+| Reuse properties/behavior from another class | Inheritance (`open`/`override`) |
 
 ---
 
 ## Interview phrases
 
+- *"A class encapsulates properties and behavior — state and functions — into a single unit."*
+- *"Inheritance is an OOP mechanism to reuse properties and behaviors from other classes; it creates an 'is-a' relationship that enables polymorphism."*
 - *"Kotlin doesn't allow multiple class inheritance, but does for interfaces — that's why it favors composition over deep hierarchies."*
 - *"abstract class when I need shared state in the base; interface when I'm only defining a contract."*
 - *"data class generates equals/hashCode/copy only from the primary constructor — a property in the body gets ignored."*
