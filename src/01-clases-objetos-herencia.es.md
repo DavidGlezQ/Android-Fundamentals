@@ -6,7 +6,7 @@
 
 ## 1. `class` — la base
 
-Una `class` es un molde para crear objetos. **Encapsula propiedades (estado) y funciones (comportamiento)** en una sola unidad: los datos que un objeto necesita cargar y las acciones que puede realizar viven juntos, en vez de estar sueltos por el código.
+Una `class` es una plantilla para crear objetos. **Encapsula propiedades (estado) y funciones (comportamiento)** en una sola unidad: los datos que un objeto necesita cargar y las acciones que puede realizar viven juntos, en vez de estar sueltos por el código.
 
 Por defecto en Kotlin es **`final`**: no se puede heredar de ella salvo que la marques `open`.
 
