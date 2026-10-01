@@ -1,16 +1,12 @@
-# Classes, Objects & Inheritance / Clases, objetos y herencia
-
-[English version](01-clases-objetos-herencia.en.md)
-
----
-
 ## 1. `class` — la base
 
-Una `class` es un molde para crear objetos. Por defecto en Kotlin es **`final`**: no se puede heredar de ella salvo que la marques `open`.
+Una `class` es un molde para crear objetos. **Encapsula propiedades (estado) y funciones (comportamiento)** en una sola unidad: los datos que un objeto necesita cargar y las acciones que puede realizar viven juntos, en vez de estar sueltos por el código.
+
+Por defecto en Kotlin es **`final`**: no se puede heredar de ella salvo que la marques `open`.
 
 ```kotlin
-class User(val name: String, val age: Int) {
-    fun isAdult() = age >= 18
+class User(val name: String, val age: Int) {   // propiedades: estado del objeto
+    fun isAdult() = age >= 18                   // función: comportamiento del objeto
 }
 
 val u = User("Ana", 30)

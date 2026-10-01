@@ -1,16 +1,12 @@
-# Classes, Objects & Inheritance / Clases, objetos y herencia
-
-[Versión en español](01-clases-objetos-herencia.es.md)
-
----
-
 ## 1. `class` — the basics
 
-A `class` is a blueprint for creating objects. By default in Kotlin it's **`final`**: you can't inherit from it unless you mark it `open`.
+A `class` is a blueprint for creating objects. It **encapsulates properties (state) and functions (behavior)** into a single unit: the data an object needs to hold and the actions it can perform live together, instead of being scattered across the code.
+
+By default in Kotlin it's **`final`**: you can't inherit from it unless you mark it `open`.
 
 ```kotlin
-class User(val name: String, val age: Int) {
-    fun isAdult() = age >= 18
+class User(val name: String, val age: Int) {   // properties: the object's state
+    fun isAdult() = age >= 18                   // function: the object's behavior
 }
 
 val u = User("Ana", 30)
