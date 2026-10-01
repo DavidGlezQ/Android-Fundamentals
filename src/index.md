@@ -6,7 +6,7 @@ Español (default) · English version disponible por tema.
 ---
 
 ## 01 — Kotlin Fundamentals
-- Classes, Objects & Inheritance / Clases, objetos y herencia — [ES](01-clases-objetos-herencia.en.md) · [EN](01-clases-objetos-herencia.es.md)
+- Classes, Objects & Inheritance / Clases, objetos y herencia — [ES](01-clases-objetos-herencia.es.md) · [EN](01-clases-objetos-herencia.en.md)
 - Types & Modifiers / Tipos y modificadores — [ES](02-tipos-y-modificadores.md) · [EN](02-tipos-y-modificadores.en.md)
 - Functions & Delegation / Funciones y delegación — [ES](03-funciones-y-delegacion.md) · [EN](03-funciones-y-delegacion.en.md)
 
