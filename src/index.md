@@ -11,10 +11,10 @@ Español (default) · English version disponible por tema.
 - Functions & Delegation / Funciones y delegación — [ES](kotlinFundamentals/03-funciones-y-delegacion.es.md) · [EN](kotlinFundamentals/03-funciones-y-delegacion.en.md)
 
 ## 02 — Concurrencia y Corrutinas
-- Fundamentals / Fundamentos — [ES](04-concurrencia-fundamentos.md) · [EN](04-concurrencia-fundamentos.en.md)
-- Builders / Builders — [ES](05-concurrencia-builders.md) · [EN](05-concurrencia-builders.en.md)
-- Scopes & Structured Concurrency / Scopes y Structured Concurrency — [ES](06-concurrencia-scopes.md) · [EN](06-concurrencia-scopes.en.md)
-- Context & Dispatchers / Context y Dispatchers — [ES](07-concurrencia-context.md) · [EN](07-concurrencia-context.en.md)
+- Fundamentals / Fundamentos — [ES](coroutineContextAndDispatchers/04-concurrencia-fundamentos.md) · [EN](coroutineContextAndDispatchers/04-concurrencia-fundamentos.en.md)
+- Builders / Builders — [ES](coroutineContextAndDispatchers/05-concurrencia-builders.md) · [EN](coroutineContextAndDispatchers/05-concurrencia-builders.en.md)
+- Scopes & Structured Concurrency / Scopes y Structured Concurrency — [ES](coroutineContextAndDispatchers/06-concurrencia-scopes.md) · [EN](coroutineContextAndDispatchers/06-concurrencia-scopes.en.md)
+- Context & Dispatchers / Context y Dispatchers — [ES](coroutineContextAndDispatchers/07-concurrencia-context.md) · [EN](coroutineContextAndDispatchers/07-concurrencia-context.en.md)
 - Cancellation / Cancelación — [ES](08-concurrencia-cancelacion.md) · [EN](08-concurrencia-cancelacion.en.md)
 - Exception Handling / Manejo de excepciones — [ES](09-concurrencia-excepciones.md) · [EN](09-concurrencia-excepciones.en.md)
 - Flows / Flows — [ES](10-flows.md) · [EN](10-flows.en.md)
