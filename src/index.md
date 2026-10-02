@@ -8,7 +8,7 @@ Español (default) · English version disponible por tema.
 ## 01 — Kotlin Fundamentals
 - Classes, Objects & Inheritance / Clases, objetos y herencia — [ES](kotlinFundamentals/01-clases-objetos-herencia.es.md) · [EN](kotlinFundamentals/01-clases-objetos-herencia.en.md)
 - Types & Modifiers / Tipos y modificadores — [ES](kotlinFundamentals/02-tipos-y-modificadores.es.md) · [EN](kotlinFundamentals/02-tipos-y-modificadores.en.md)
-- Functions & Delegation / Funciones y delegación — [ES](kotlinFundamentals/03-funciones-y-delegacion.es.md) · [EN](kotlinFundamentals/03-funciones-y-delegacion.en.md)
+- Functions & Delegation / Funciones y delegación — [ES](kotlinFundamentals/kotlinFundamentals/03-funciones-y-delegacion.es.md) · [EN](kotlinFundamentals/kotlinFundamentals/03-funciones-y-delegacion.en.md)
 
 ## 02 — Concurrencia y Corrutinas
 - Fundamentals / Fundamentos — [ES](04-concurrencia-fundamentos.md) · [EN](04-concurrencia-fundamentos.en.md)
