@@ -69,6 +69,7 @@ Button(onClick = { doSomething() })
 // Lambda que CAPTURA una variable: su estabilidad depende de si esa variable es estable
 Button(onClick = { doSomethingWith(userId) })   // depende de si userId es estable
 ```
+Sirven para evitar que algún composable se recomponga de manera innecesaria solo porque algún callback se volvió a crear en memoria
 
 Si una lambda captura algo inestable (ej. una `List` normal, que Compose considera inestable por ser interfaz), Compose no puede garantizar que comparar la lambda sea confiable, y eso puede forzar recomposiciones de más. Por eso al optimizar Compose también importa qué capturan las lambdas que pasás, no solo los parámetros "normales".
 
