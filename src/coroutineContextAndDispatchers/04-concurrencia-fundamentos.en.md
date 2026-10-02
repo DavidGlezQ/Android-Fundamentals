@@ -1,6 +1,6 @@
 # Concurrency & Coroutines — Fundamentals / Concurrencia y Corrutinas — Fundamentos
 
-🌐 [Versión en español](04-concurrencia-fundamentos.md)
+[Versión en español](04-concurrencia-fundamentos.md)
 
 ---
 

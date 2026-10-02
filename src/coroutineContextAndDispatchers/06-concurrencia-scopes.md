@@ -1,6 +1,6 @@
 # Scopes & Structured Concurrency / Scopes y Structured Concurrency
 
-🌐 [English version](06-concurrencia-scopes.en.md)
+[English version](06-concurrencia-scopes.en.md)
 
 ---
 

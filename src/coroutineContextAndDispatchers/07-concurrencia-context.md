@@ -1,6 +1,6 @@
 # CoroutineContext & Dispatchers / CoroutineContext y Dispatchers a fondo
 
-🌐 [English version](07-concurrencia-context.en.md)
+[English version](07-concurrencia-context.en.md)
 
 ---
 

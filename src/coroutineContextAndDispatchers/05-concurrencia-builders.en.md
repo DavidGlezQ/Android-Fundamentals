@@ -1,6 +1,6 @@
 # Coroutine Builders / Builders de corrutinas
 
-🌐 [Versión en español](05-concurrencia-builders.md)
+[Versión en español](05-concurrencia-builders.md)
 
 ---
 
