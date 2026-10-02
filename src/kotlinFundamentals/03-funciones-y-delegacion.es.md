@@ -48,6 +48,7 @@ Esto es lo que permite patrones como callbacks, estrategias intercambiables, y e
 
 ## 3. Lambdas
 
+Es un bloque de código que representa una **función anónima**, puede ser tratada como cualquier otra variable.
 Una **función anónima** que podés tratar como un valor: asignarla a una variable, pasarla como argumento, devolverla.
 
 ```kotlin
