@@ -15,11 +15,11 @@ Español (default) · English version disponible por tema.
 - Builders / Builders — [ES](coroutineContextAndDispatchers/05-concurrencia-builders.md) · [EN](coroutineContextAndDispatchers/05-concurrencia-builders.en.md)
 - Scopes & Structured Concurrency / Scopes y Structured Concurrency — [ES](coroutineContextAndDispatchers/06-concurrencia-scopes.md) · [EN](coroutineContextAndDispatchers/06-concurrencia-scopes.en.md)
 - Context & Dispatchers / Context y Dispatchers — [ES](coroutineContextAndDispatchers/07-concurrencia-context.md) · [EN](coroutineContextAndDispatchers/07-concurrencia-context.en.md)
-- Cancellation / Cancelación — [ES](08-concurrencia-cancelacion.md) · [EN](08-concurrencia-cancelacion.en.md)
-- Exception Handling / Manejo de excepciones — [ES](09-concurrencia-excepciones.md) · [EN](09-concurrencia-excepciones.en.md)
-- Flows / Flows — [ES](10-flows.md) · [EN](10-flows.en.md)
-- Threads vs Coroutines / Threads vs Coroutines — [ES](11-threads-vs-coroutines.md) · [EN](11-threads-vs-coroutines.en.md)
-- Coroutine Testing / Testing de corrutinas — [ES](12-testing-corrutinas.md) · [EN](12-testing-corrutinas.en.md)
+- Cancellation / Cancelación — [ES](oroutineContextAndDispatchers/08-concurrencia-cancelacion.md) · [EN](oroutineContextAndDispatchers/08-concurrencia-cancelacion.en.md)
+- Exception Handling / Manejo de excepciones — [ES](oroutineContextAndDispatchers/09-concurrencia-excepciones.md) · [EN](oroutineContextAndDispatchers/09-concurrencia-excepciones.en.md)
+- Flows / Flows — [ES](oroutineContextAndDispatchers/10-flows.md) · [EN](oroutineContextAndDispatchers/10-flows.en.md)
+- Threads vs Coroutines / Threads vs Coroutines — [ES](oroutineContextAndDispatchers/11-threads-vs-coroutines.md) · [EN](oroutineContextAndDispatchers/11-threads-vs-coroutines.en.md)
+- Coroutine Testing / Testing de corrutinas — [ES](oroutineContextAndDispatchers/12-testing-corrutinas.md) · [EN](oroutineContextAndDispatchers/12-testing-corrutinas.en.md)
 
 ## 03 — Jetpack Compose
 - State Management / Manejo de estado — [ES](13-compose-estado.md) · [EN](13-compose-estado.en.md)
