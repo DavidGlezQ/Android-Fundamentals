@@ -15,16 +15,16 @@ Español (default) · English version disponible por tema.
 - Builders / Builders — [ES](coroutineContextAndDispatchers/05-concurrencia-builders.md) · [EN](coroutineContextAndDispatchers/05-concurrencia-builders.en.md)
 - Scopes & Structured Concurrency / Scopes y Structured Concurrency — [ES](coroutineContextAndDispatchers/06-concurrencia-scopes.md) · [EN](coroutineContextAndDispatchers/06-concurrencia-scopes.en.md)
 - Context & Dispatchers / Context y Dispatchers — [ES](coroutineContextAndDispatchers/07-concurrencia-context.md) · [EN](coroutineContextAndDispatchers/07-concurrencia-context.en.md)
-- Cancellation / Cancelación — [ES](oroutineContextAndDispatchers/08-concurrencia-cancelacion.md) · [EN](oroutineContextAndDispatchers/08-concurrencia-cancelacion.en.md)
-- Exception Handling / Manejo de excepciones — [ES](oroutineContextAndDispatchers/09-concurrencia-excepciones.md) · [EN](oroutineContextAndDispatchers/09-concurrencia-excepciones.en.md)
-- Flows / Flows — [ES](oroutineContextAndDispatchers/10-flows.md) · [EN](oroutineContextAndDispatchers/10-flows.en.md)
-- Threads vs Coroutines / Threads vs Coroutines — [ES](oroutineContextAndDispatchers/11-threads-vs-coroutines.md) · [EN](oroutineContextAndDispatchers/11-threads-vs-coroutines.en.md)
-- Coroutine Testing / Testing de corrutinas — [ES](oroutineContextAndDispatchers/12-testing-corrutinas.md) · [EN](oroutineContextAndDispatchers/12-testing-corrutinas.en.md)
+- Cancellation / Cancelación — [ES](coroutineContextAndDispatchers/08-concurrencia-cancelacion.md) · [EN](coroutineContextAndDispatchers/08-concurrencia-cancelacion.en.md)
+- Exception Handling / Manejo de excepciones — [ES](coroutineContextAndDispatchers/09-concurrencia-excepciones.md) · [EN](coroutineContextAndDispatchers/09-concurrencia-excepciones.en.md)
+- Flows / Flows — [ES](coroutineContextAndDispatchers/10-flows.md) · [EN](coroutineContextAndDispatchers/10-flows.en.md)
+- Threads vs Coroutines / Threads vs Coroutines — [ES](coroutineContextAndDispatchers/11-threads-vs-coroutines.md) · [EN](coroutineContextAndDispatchers/11-threads-vs-coroutines.en.md)
+- Coroutine Testing / Testing de corrutinas — [ES](coroutineContextAndDispatchers/12-testing-corrutinas.md) · [EN](coroutineContextAndDispatchers/12-testing-corrutinas.en.md)
 
 ## 03 — Jetpack Compose
-- State Management / Manejo de estado — [ES](13-compose-estado.md) · [EN](13-compose-estado.en.md)
-- Recomposition & Stability / Recomposición y estabilidad — [ES](14-compose-recomposicion.md) · [EN](14-compose-recomposicion.en.md)
-- Responsive Design / Responsive design — [ES](15-compose-responsive.md) · [EN](15-compose-responsive.en.md)
+- State Management / Manejo de estado — [ES](jetpackCompose/13-compose-estado.md) · [EN](jetpackCompose/13-compose-estado.en.md)
+- Recomposition & Stability / Recomposición y estabilidad — [ES](jetpackCompose/14-compose-recomposicion.md) · [EN](jetpackCompose/14-compose-recomposicion.en.md)
+- Responsive Design / Responsive design — [ES](jetpackCompose/15-compose-responsive.md) · [EN](jetpackCompose/15-compose-responsive.en.md)
 
 ## 04 — Lifecycle y Componentes Android
 - Lifecycle / Lifecycle — [ES](16-lifecycle.md) · [EN](16-lifecycle.en.md)
